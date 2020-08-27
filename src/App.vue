@@ -38,20 +38,22 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <v-container
+        class="text-center"
+      >
+        <router-link to="/">Home</router-link> | 
+        <router-link to="/about">About</router-link> | 
+        <router-link to="/contact">Contact</router-link>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
 
   data: () => ({
     //
