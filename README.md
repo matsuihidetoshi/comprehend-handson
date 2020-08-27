@@ -476,35 +476,29 @@ Vue.jsのデフォルト画面が表示されればOK
 ここまでで、APIの作成とVue.jsのプロジェクトの作成ができました。  
 続いて、ユーザーが実際に問合せできる様にフォームを作成していきます。
 
-#### 必要パッケージのインストール
+#### Vuetifyのインストール
+
+今回は簡単な問合せフォームを作成するだけですが、手軽にマテリアルデザインを導入できるデザインフレームワークの**Vuetify**を導入します。  
+これにより、優れたUIのフォームを簡単に作成することができます。
 
 ```
-npm i aws-amplify aws-amplify-vue lodash
+vue add vuetify
 ```
 
-#### localise.js
+- 以上を実行
 
-ログイン画面を日本語メッセージにするための設定を記述したファイルです
+```
+? Choose a preset: (Use arrow keys)
+❯ Default (recommended) 
+  Prototype (rapid development) 
+  Configure (advanced)
+```
 
-- vueamplifydev/src/localize.js
+- Default (recommended)のまま、Enter
 
-を
 
-- contact/src/localize.js
 
-となる様にコピー
 
-#### SignIn.vue
-
-認証機能を提供するコンポーネントです
-
-- vueamplifydev/src/components/SignIn.vue
-
-を
-
-- contact/src/components/SignIn.vue
-
-となる様にコピー
 
 #### PrivateNote.vue
 
