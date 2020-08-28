@@ -441,8 +441,6 @@ Vue CLI v4.1.2
 Cloud9環境をお使いの方は、Cloud9の仕組み上起動した開発環境のサーバーをうまくプレビューできないため  
 設定を追加します。
 
-#### 設定ファイルの追加
-
 - [参考リポジトリのcontact/vue.config.js](https://github.com/matsuihidetoshi/contact/blob/master/vue.config.js)
 
 を、作成しているプロジェクトで同じ階層になる様に
