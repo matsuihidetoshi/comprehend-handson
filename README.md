@@ -443,13 +443,13 @@ Cloud9環境をお使いの方は、Cloud9の仕組み上起動した開発環�
 
 #### 設定ファイルの追加
 
-- vueamplifydev/vue.config.js
+- [参考リポジトリ](https://github.com/matsuihidetoshi/contact)のcontact/vue.config.js
 
-を
+を、作成しているプロジェクトで同じ階層になる様に
 
 - contact/vue.config.js
 
-となる様にコピー
+の様にコピー
 
 #### テスト起動
 
@@ -505,6 +505,8 @@ vue add vuetify
 ```
 npm i axios
 ```
+
+- 以上を実行
 
 
 
