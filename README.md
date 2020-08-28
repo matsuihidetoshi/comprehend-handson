@@ -496,7 +496,13 @@ vue add vuetify
 
 - Default (recommended)のまま、Enter
 
+#### axiosのインストール
 
+作成したAPIへリクエストを送信するために**axios**をインストールします。
+
+```
+npm i axios
+```
 
 
 
