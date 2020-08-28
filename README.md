@@ -436,14 +436,14 @@ Vue CLI v4.1.2
 ? Save this as a preset for future projects? (y/N) n
 ```
 
-## Vue.jsプロジェクトにCloud9向けの設定を追加 ※Cloud9の場合
+#### Vue.jsプロジェクトにCloud9向けの設定を追加 ※Cloud9の場合
 
 Cloud9環境をお使いの方は、Cloud9の仕組み上起動した開発環境のサーバーをうまくプレビューできないため  
 設定を追加します。
 
 #### 設定ファイルの追加
 
-- [参考リポジトリ](https://github.com/matsuihidetoshi/contact)のcontact/vue.config.js
+- [参考リポジトリのcontact/vue.config.js](https://github.com/matsuihidetoshi/contact/blob/master/vue.config.js)
 
 を、作成しているプロジェクトで同じ階層になる様に
 
