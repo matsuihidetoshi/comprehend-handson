@@ -508,37 +508,25 @@ npm i axios
 
 
 
-#### PrivateNote.vue
+#### Contact.vue
 
-今回の主要な機能であるメモ機能を提供するコンポーネントです
+続いて、必要なコードを[参考リポジトリ](https://github.com/matsuihidetoshi/contact)からコピーしていきます。  
+まずはお問い合わせフォームページのビューをコピーします。
 
-- vueamplifydev/src/components/PrivateNote.vue
+- https://github.com/matsuihidetoshi/contact/blob/master/src/views/Contact.vue
 
 を
 
-- contact/src/components/PrivateNote.vue
+- contact/src/views/Contact.vue
 
 となる様にコピー
-
-#### main.js
-
-アプリケーションのエントリーポイントになるファイルです。  
-Amplify関連のパッケージを導入するために記述を追加します。
-
-- vueamplifydev/src/main.js
-
-の内容を
-
-- contact/src/main.js
-
-に上書き
 
 #### router/index.js
 
 ルーティングの設定を記述するファイルです。  
 ログイン状態を管理してページのアクセス制御をします。
 
-- vueamplifydev/src/router/index.js
+- https://github.com/matsuihidetoshi/contact/blob/master/src/router/index.js
 
 の内容を
 
@@ -551,7 +539,7 @@ Amplify関連のパッケージを導入するために記述を追加します�
 アプリケーションの共通レイアウトのコンポーネントです。  
 各ページへのナビゲーションを追加します。
 
-- vueamplifydev/src/App.vue
+- https://github.com/matsuihidetoshi/contact/blob/master/src/App.vue
 
 の内容を
 
@@ -569,7 +557,7 @@ npm run serve
 ```
 
 を実行してアプリケーションを起動し、プレビューしてみてください。  
-正しくメモを投稿でき、リアルタイムに表示が更新されればOKです。
+**Contact**ページからお問い合わせを送信し、設定したメールアドレスに感情解析の結果とともにお問い合わせ内容が届けばOKです。
 
 ## フロントエンドのデプロイ
 
