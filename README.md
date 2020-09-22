@@ -596,7 +596,7 @@ git commit -m 'built application'
 
 ![create_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/create_repository.png)
 
-- `Repository name`に、`notes`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。
+- `Repository name`に、`contact`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。
 
 ***
 
@@ -607,15 +607,15 @@ git commit -m 'built application'
 ***
 
 ```
-git remote add origin https://github.com/ユーザー名/notes.git
+git remote add origin https://github.com/ユーザー名/contact.git
 git push -u origin master
 ```
 
 下記のようにユーザー名、パスワードを求められるので、GitHubの`ユーザー名` `パスワード`を入力してください。
 
 ```
-Username for 'https://github.com/matsuihidetoshi/notes-final.git':ユーザー名
-Password for 'https://matsuihidetoshi@github.com/matsuihidetoshi/notes-final.git':パスワード
+Username for 'https://github.com/matsuihidetoshi/contact.git':ユーザー名
+Password for 'https://matsuihidetoshi@github.com/matsuihidetoshi/contact.git':パスワード
 ```
 
 これで、GitHubにコードがプッシュされ、デプロイの準備ができました。
@@ -633,9 +633,9 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-![select_notes](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_notes.png)
+![select_contact](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_contact.png)
 
-- すでに`notes`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
+- すでに`contact`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
 
 ***
 
@@ -656,7 +656,7 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ![select_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_repository.png)
 
-- `リポジトリ`は`GitHubユーザー名/notes`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
+- `リポジトリ`は`GitHubユーザー名/contact`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
 
 ***
 
@@ -758,9 +758,9 @@ S3にデプロイされたアプリケーションのフロントエンドも削
 
 ***
 
-![delete_select_notes](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_select_notes.png)
+![delete_select_contact](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_select_contact.png)
 
-- **Amplifyコンソール**を開き、**全てのアプリ**→**notes**を選択してください。  
+- **Amplifyコンソール**を開き、**全てのアプリ**→**contact**を選択してください。  
 
 ***
 
