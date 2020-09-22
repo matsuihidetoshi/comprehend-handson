@@ -582,25 +582,25 @@ git commit -m 'built application'
 
 ***
 
-![github_signin](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/github_signin.png)
+![github_signin](https://github.com/matsuihidetoshi/contact/blob/master/images/github_signin.png)
 
 - ユーザー名またはメールアドレスとパスワードを入力し、「Sign in」をクリックします。
 
 ***
 
-![new_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/new_repository.png)
+![new_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/new_repository.png)
 
 - 上部ナビゲーションバー右上の`+`をクリックし、`New repository`をクリックしてください。
 
 ***
 
-![create_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/create_repository.png)
+![create_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/create_repository.png)
 
 - `Repository name`に、`contact`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。
 
 ***
 
-![copy_push_command](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/copy_push_command.png)
+![copy_push_command](https://github.com/matsuihidetoshi/contact/blob/master/images/copy_push_command.png)
 
 - `…or push an existing repository from the command line`という項目をコピーし、ターミナルでプロジェクトフォルダにて実行してください。
 
@@ -627,13 +627,13 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### Amplifyコンソールを開く
 
-![choose_amplify](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/choose_amplify.png)
+![choose_amplify](https://github.com/matsuihidetoshi/contact/blob/master/images/choose_amplify.png)
 
 - AWSマネジメントコンソールから、`Amplify`を検索し、選択します。  
 
 ***
 
-![select_contact](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_contact.png)
+![select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/select_contact.png)
 
 - すでに`contact`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
 
@@ -641,20 +641,20 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### デプロイ - Githubの連携
 
-![select_github](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_github.png)
+![select_github](https://github.com/matsuihidetoshi/contact/blob/master/images/select_github.png)
 
 - `GitHub`を選択し、`Connect branch`をクリックしてください。  
 
 ***
 
-![oauth](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/oauth.png)
+![oauth](https://github.com/matsuihidetoshi/contact/blob/master/images/oauth.png)
 
 - GitHubの認証ページが開く場合は、`ユーザー名またはメールアドレス` と `パスワード`を入力してログインしてください。  
 - OAuthによるアクセス許可の画面が表示されますので、`Authorize aws-amplify-console`をクリックしてください。
 
 ***
 
-![select_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_repository.png)
+![select_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/select_repository.png)
 
 - `リポジトリ`は`GitHubユーザー名/contact`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
 
@@ -662,7 +662,7 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### デプロイ - ビルド設定
 
-![build_config](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/build_config.png)
+![build_config](https://github.com/matsuihidetoshi/contact/blob/master/images/build_config.png)
 
 - `ビルド設定の構成`画面が開くので、`Select a backend environment`で`default`を選択してください。
 - `Select an existing service role or create a new one so Amplify Console may access your resources.`という項目で、`Create new role`をクリックしてください。  
@@ -671,25 +671,25 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### デプロイ - ロールの作成
 
-![role_service](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_service.png)
+![role_service](https://github.com/matsuihidetoshi/contact/blob/master/images/role_service.png)
 
 - `ロールの作成`画面が表示されますので、デフォルトのまま`次のステップ: アクセス権限`をクリックしてください。
 
 ***
 
-![role_policy](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_policy.png)
+![role_policy](https://github.com/matsuihidetoshi/contact/blob/master/images/role_policy.png)
 
 - 次の画面で`Attached アクセス権限ポリシー`という項目などが表示されますが、こちらもデフォルトのまま`次のステップ: タグ`をクリックしてください。  
 
 ***
 
-![role_tag.png](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_tag.png)
+![role_tag.png](https://github.com/matsuihidetoshi/contact/blob/master/images/role_tag.png)
 
 - 次の画面で`タグの追加（オプション）`という項目が表示されますが、こちらもデフォルトのまま`次のステップ: 確認`をクリックしてください。
 
 ***
 
-![role_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_confirm.png)
+![role_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/role_confirm.png)
 
 - 確認画面が開きますが、そのまま`ロールの作成`をクリックしてください。
 - 画面が遷移したら、そのページは閉じてしまって構いません。
@@ -698,7 +698,7 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### デプロイ- ビルド設定2
 
-![role_select](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_select.png)
+![role_select](https://github.com/matsuihidetoshi/contact/blob/master/images/role_select.png)
 
 - 先ほど開いていたAmplifyコンソールに戻ってください。
 - `Select an existing service role or create a new one so Amplify Console may access your resources.`の項目のプルダウンの横の🔄マークをクリックして下さい。
@@ -707,13 +707,13 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-![deploy_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/deploy_confirm.png)
+![deploy_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/deploy_confirm.png)
 
 - `確認`画面が表示されますが、`保存してデプロイ`をクリックしてください。  
 
 ***
 
-![deploy_progress](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/deploy_progress.png)
+![deploy_progress](https://github.com/matsuihidetoshi/contact/blob/master/images/deploy_progress.png)
   
 - ここから少し時間がかかりますが（10分ほど）、デプロイのフローが終わるまでお待ちください。
 - デプロイが完了してからURLのリンクをクリックすると、アプリケーションが開きます。 
@@ -758,19 +758,19 @@ S3にデプロイされたアプリケーションのフロントエンドも削
 
 ***
 
-![delete_select_contact](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_select_contact.png)
+![delete_select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_select_contact.png)
 
 - **Amplifyコンソール**を開き、**全てのアプリ**→**contact**を選択してください。  
 
 ***
 
-![delete](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete.png)
+![delete](https://github.com/matsuihidetoshi/contact/blob/master/images/delete.png)
 
 - 画面右上の**アクション**から、**アプリの削除**を選択してください。  
 
 ***
 
-![delete_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_confirm.png)
+![delete_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_confirm.png)
 
 - 確認用ダイアログが表示されるので、フォームに**delete**を入力し、**Delete**を押下してください。
 
