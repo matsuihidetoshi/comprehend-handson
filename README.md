@@ -578,22 +578,44 @@ git add .
 git commit -m 'built application'
 ```
 
-その後、GitHubにログインしてください。  
-その後、上部ナビゲーションバー右上の`+`をクリックし、`New repository`をクリックしてください。  
-`Repository name`に、`contact`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。  
-そのあとリダイレクトした画面で`…or push an existing repository from the command line`という項目があります。  
-その内容をコピーし、ターミナルでプロジェクトフォルダにて実行してください。
+その後、GitHubにサインインしてください。
+
+***
+
+![github_signin](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/github_signin.png)
+
+- ユーザー名またはメールアドレスとパスワードを入力し、「Sign in」をクリックします。
+
+***
+
+![new_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/new_repository.png)
+
+- 上部ナビゲーションバー右上の`+`をクリックし、`New repository`をクリックしてください。
+
+***
+
+![create_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/create_repository.png)
+
+- `Repository name`に、`notes`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。
+
+***
+
+![copy_push_command](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/copy_push_command.png)
+
+- `…or push an existing repository from the command line`という項目をコピーし、ターミナルでプロジェクトフォルダにて実行してください。
+
+***
 
 ```
-git remote add origin https://github.com/ユーザー名/contact.git
+git remote add origin https://github.com/ユーザー名/notes.git
 git push -u origin master
 ```
 
 下記のようにユーザー名、パスワードを求められるので、GitHubの`ユーザー名` `パスワード`を入力してください。
 
 ```
-Username for 'https://github.com/matsuihidetoshi/contact-final.git':ユーザー名
-Password for 'https://matsuihidetoshi@github.com/matsuihidetoshi/contact-final.git':パスワード
+Username for 'https://github.com/matsuihidetoshi/notes-final.git':ユーザー名
+Password for 'https://matsuihidetoshi@github.com/matsuihidetoshi/notes-final.git':パスワード
 ```
 
 これで、GitHubにコードがプッシュされ、デプロイの準備ができました。
@@ -605,50 +627,99 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 #### Amplifyコンソールを開く
 
-まず、AWSマネジメントコンソールから、`Amplify`を検索し、選択します。  
-Amplifyコンソールが開きますが、すでに`contact`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
+![choose_amplify](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/choose_amplify.png)
+
+- AWSマネジメントコンソールから、`Amplify`を検索し、選択します。  
+
+***
+
+![select_notes](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_notes.png)
+
+- すでに`notes`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
+
+***
 
 #### デプロイ - Githubの連携
 
-フロントエンドのコードとして、どのGitリポジトリを参照するかの選択するかの画面が表示されますので、`GitHub`を選択し、`Connect branch`をクリックしてください。  
-  
-GitHubの認証ページが開きますので、`ユーザー名` `パスワード`を入力してログインしてください。  
-OAuthによるアクセス許可の画面が表示されますので、`Authorize xxxx`をクリックしてください。
-  
-`GitHub 認証が成功しました。`と表示されます。  
-下部の`リポジトリ`にて、`contact`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
+![select_github](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_github.png)
+
+- `GitHub`を選択し、`Connect branch`をクリックしてください。  
+
+***
+
+![oauth](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/oauth.png)
+
+- GitHubの認証ページが開く場合は、`ユーザー名またはメールアドレス` と `パスワード`を入力してログインしてください。  
+- OAuthによるアクセス許可の画面が表示されますので、`Authorize aws-amplify-console`をクリックしてください。
+
+***
+
+![select_repository](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/select_repository.png)
+
+- `リポジトリ`は`GitHubユーザー名/notes`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
+
+***
 
 #### デプロイ - ビルド設定
 
-`ビルド設定の構成`画面が開くので、`Select a backend environment`で`default`を選択してください。
+![build_config](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/build_config.png)
+
+- `ビルド設定の構成`画面が開くので、`Select a backend environment`で`default`を選択してください。
+- `Select an existing service role or create a new one so Amplify Console may access your resources.`という項目で、`Create new role`をクリックしてください。  
+
+***
 
 #### デプロイ - ロールの作成
 
-`Select an existing service role or create a new one so Amplify Console may access your resources.`という項目で、  
-`Create new role`をクリックしてください。  
-  
-`ロールの作成`画面が表示されますので、デフォルトのまま`次のステップ: アクセス権限`をクリックしてください。
-  
-次の画面で`Attached アクセス権限ポリシー`という項目などが表示されますが、こちらもデフォルトのまま`次のステップ: タグ`をクリックしてください。  
-  
-次の画面で`タグの追加（オプション）`という項目が表示されますが、こちらもデフォルトのまま`次のステップ: 確認`をクリックしてください。  
-  
-確認画面が開きますが、そのまま`ロールの作成`をクリックしてください。  
-画面が遷移したら、そのページは閉じてしまって構いません。  
+![role_service](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_service.png)
+
+- `ロールの作成`画面が表示されますので、デフォルトのまま`次のステップ: アクセス権限`をクリックしてください。
+
+***
+
+![role_policy](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_policy.png)
+
+- 次の画面で`Attached アクセス権限ポリシー`という項目などが表示されますが、こちらもデフォルトのまま`次のステップ: タグ`をクリックしてください。  
+
+***
+
+![role_tag.png](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_tag.png)
+
+- 次の画面で`タグの追加（オプション）`という項目が表示されますが、こちらもデフォルトのまま`次のステップ: 確認`をクリックしてください。
+
+***
+
+![role_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_confirm.png)
+
+- 確認画面が開きますが、そのまま`ロールの作成`をクリックしてください。
+- 画面が遷移したら、そのページは閉じてしまって構いません。
+
+***
 
 #### デプロイ- ビルド設定2
 
-先ほど開いていたAmplifyコンソールに戻り、  
-`Select an existing service role or create a new one so Amplify Console may access your resources.`の項目のプルダウンの横の🔄マークをクリックし、  
-先ほど作成した`amplifyconsole-backend-role`を選択してください。  
+![role_select](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/role_select.png)
+
+- 先ほど開いていたAmplifyコンソールに戻ってください。
+- `Select an existing service role or create a new one so Amplify Console may access your resources.`の項目のプルダウンの横の🔄マークをクリックして下さい。
+- 先ほど作成した`amplifyconsole-backend-role`を選択してください。  
+- その後、`次へ`をクリックしてください。  
+
+***
+
+![deploy_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/deploy_confirm.png)
+
+- `確認`画面が表示されますが、`保存してデプロイ`をクリックしてください。  
+
+***
+
+![deploy_progress](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/deploy_progress.png)
   
-その後、`次へ`をクリックしてください。  
-  
-`確認`画面が表示されますが、`保存してデプロイ`をクリックしてください。  
-  
-ここから少し時間がかかりますが（10分ほど）、デプロイのフローが終わるまでお待ちください。
-  
-デプロイが完了すると、`ドメイン`という項目ができていますので、そちらのリンクをクリックすると、アプリケーションが開きます。  
+- ここから少し時間がかかりますが（10分ほど）、デプロイのフローが終わるまでお待ちください。
+- デプロイが完了してからURLのリンクをクリックすると、アプリケーションが開きます。 
+- 動作確認し、問題なければ完成です。おめでとうございます！
+
+***
 
 ## アプリケーションの削除
 
@@ -683,10 +754,27 @@ Project deleted locally.
 
 #### Amplifyコンソールから削除
 
-S3にデプロイされたアプリケーションのフロントエンドも削除する必要があります。  
-**Amplifyコンソール**を開き、**全てのアプリ**→**contact**を選択してください。  
-画面右上の**アクション**から、**アプリの削除**を選択してください。  
-確認用ダイアログが表示されるので、フォームに**delete**を入力し、**Delete**を押下してください。
+S3にデプロイされたアプリケーションのフロントエンドも削除する必要があります。
+
+***
+
+![delete_select_notes](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_select_notes.png)
+
+- **Amplifyコンソール**を開き、**全てのアプリ**→**notes**を選択してください。  
+
+***
+
+![delete](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete.png)
+
+- 画面右上の**アクション**から、**アプリの削除**を選択してください。  
+
+***
+
+![delete_confirm](https://github.com/matsuihidetoshi/vueamplifydev/blob/master/images/delete_confirm.png)
+
+- 確認用ダイアログが表示されるので、フォームに**delete**を入力し、**Delete**を押下してください。
+
+***
 
 これで、今回のハンズオンで作成したアプリケーションの全てのリソースが削除されます。  
 **今回使用したCloud9環境を使用しない場合、別途削除していただく必要があります  
