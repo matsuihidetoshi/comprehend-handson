@@ -670,8 +670,7 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ![build_config](https://github.com/matsuihidetoshi/contact/blob/master/images/build_config.png)
 
-- `ビルド設定の構成`画面が開くので、`Select a backend environment`で`default`を選択してください。
-- `Select an existing service role or create a new one so Amplify Console may access your resources.`という項目で、`Create new role`をクリックしてください。  
+- `次へ`をクリックします。
 
 ***
 
