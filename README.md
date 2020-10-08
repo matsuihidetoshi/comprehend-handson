@@ -519,6 +519,16 @@ npm i axios
 - contact/src/views/Contact.vue
 
 となる様にコピーします
+
+また、169行目に先ほど**3.API Gatewayの設定**の項目の最後に生成された**API Gatewayのエンドポイント**を設定されます。
+
+- contact/src/views/Contact.vue#169
+
+```
+- baseURL: 'https://example_url.execute-api.ap-northeast-1.amazonaws.com'
++ baseURL: 'https://xxxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com' //3.API Gatewayの設定で生成されたエンドポイント
+```
+
 #### router/index.js
 
 ルーティングの設定を記述するファイルです。  
