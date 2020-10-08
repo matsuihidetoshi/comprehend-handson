@@ -467,8 +467,7 @@ npm run serve
 
 ローカルのPCの場合はブラウザにてlocalhost:8080にアクセス
 Cloud9の場合、画面の上部のPreview→Preview Running Applicationをクリックし、  
-Vue.jsのデフォルト画面が表示されればOK  
-*そのままサーバーは起動したまま、別ターミナルを開き、contactディレクトリに移動して以降の作業を実施
+Vue.jsのデフォルト画面が表示されればOK
 
 ## 4.フロントエンド側のコードを作成
 
