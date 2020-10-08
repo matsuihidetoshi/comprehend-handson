@@ -690,34 +690,32 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ## アプリケーションの削除
 
-デプロイしたアプリケーションは、そのままにしておくとオンデマンドで**課金**されます。  
-よほどアクセスが集中しない限り、ほとんど無視できるレベルの金額しか課金されませんが、  
-全てのリソースを削除しておけば課金されることはありません。  
-以下にアプリケーションリソース全体の削除方法を記載します。
+デプロイしたアプリケーションは、そのままにしておくとオンデマンドで費用が発生します。  
+料金をゼロにするためには、以下のようにアプリケーションリソース全体の削除を行います。
 
-#### CLIによる削除
+#### API Gatewayの削除
 
-まずはバックエンドのリソースを削除します。  
-プロジェクトフォルダにて、
+まずはLambda関数を呼び出すためのAPI Gatewayを削除します。
 
-```
-amplify delete
-```
+***
 
-を実行してください。  
-すると下記の通り確認が表示されますので、承諾してください(yを入力しEnter)。
+![select_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/select_api_gateway.png)
 
-```
-? Are you sure you want to continue? (This would delete all the environments of 
-the project from the cloud and wipe out all the local amplify resource files) (Y/n) y
-```
+- [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「api」と入力し、検索結果（プルダウン）の「API Gateway」をクリックします。
 
-問題なく削除されれば、下記の通り表示されます。
+***
 
-```
-✔ Project deleted in the cloud
-Project deleted locally.
-```
+![delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_api_gateway.png)
+
+- **contactFunction-API**のラジオボタンをクリックして、**Actions**のプルダンメニューの**Delete**をクリックします。
+
+***
+
+![confirm_delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_delete_api_gateway.png)
+
+- **削除**をクリックすれば、API Gatewayの削除完了です。
+
+***
 
 #### Amplifyコンソールから削除
 
