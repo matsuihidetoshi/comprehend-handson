@@ -447,8 +447,7 @@ Cloud9環境をお使いの方は、Cloud9の仕組み上起動した開発環�
 
 - contact/vue.config.js
 
-の様にコピー
-
+の様にコピーします
 #### テスト起動
 
 開発環境のローカルサーバーを起動してプレビューし、問題なくVue.jsプロジェクトが  
@@ -519,8 +518,7 @@ npm i axios
 
 - contact/src/views/Contact.vue
 
-となる様にコピー
-
+となる様にコピーします
 #### router/index.js
 
 ルーティングの設定を記述するファイルです。  

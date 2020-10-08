@@ -166,7 +166,7 @@ export default {
       this.loading = true
       if (!this.valid) { return }
       const instance = axios.create({
-        baseURL: 'https://mcpnsdys00.execute-api.ap-northeast-1.amazonaws.com'
+        baseURL: 'https://example_url.execute-api.ap-northeast-1.amazonaws.com'
       })
       instance.post('/default/contactFunction', {
         title: this.title.value,
