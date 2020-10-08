@@ -717,6 +717,31 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
+#### Lambda関数の削除
+
+続いて、Lambda関数を削除していきます。
+
+***
+
+![lambda_select](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_select.png)
+
+- [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「lambda」と入力し、検索結果（プルダウン）の「Lambda」をクリックします。
+
+***
+
+![delete_lambda](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_lambda.png)
+
+- **contactFunction**のラジオボタンをクリックして、**アクション**のプルダンメニューの**削除**をクリックします。
+
+***
+
+![confirm_delete_lambda](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_delete_lambda.png)
+
+- **削除**をクリックすれば、Lambda関数の削除完了です。
+
+***
+
+
 #### Amplifyコンソールから削除
 
 S3にデプロイされたアプリケーションのフロントエンドも削除する必要があります。
