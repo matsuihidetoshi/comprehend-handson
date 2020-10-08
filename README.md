@@ -639,9 +639,9 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-![select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/select_contact.png)
+![select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/amplify_get_started.png)
 
-- すでに`contact`というアプリケーションの項目が作成されているはずですので、それをクリックしてください。  
+- `GET STARTED`をクリックします。  
 
 ***
 
