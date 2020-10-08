@@ -674,44 +674,6 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-#### デプロイ - ロールの作成
-
-![role_service](https://github.com/matsuihidetoshi/contact/blob/master/images/role_service.png)
-
-- `ロールの作成`画面が表示されますので、デフォルトのまま`次のステップ: アクセス権限`をクリックしてください。
-
-***
-
-![role_policy](https://github.com/matsuihidetoshi/contact/blob/master/images/role_policy.png)
-
-- 次の画面で`Attached アクセス権限ポリシー`という項目などが表示されますが、こちらもデフォルトのまま`次のステップ: タグ`をクリックしてください。  
-
-***
-
-![role_tag.png](https://github.com/matsuihidetoshi/contact/blob/master/images/role_tag.png)
-
-- 次の画面で`タグの追加（オプション）`という項目が表示されますが、こちらもデフォルトのまま`次のステップ: 確認`をクリックしてください。
-
-***
-
-![role_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/role_confirm.png)
-
-- 確認画面が開きますが、そのまま`ロールの作成`をクリックしてください。
-- 画面が遷移したら、そのページは閉じてしまって構いません。
-
-***
-
-#### デプロイ- ビルド設定2
-
-![role_select](https://github.com/matsuihidetoshi/contact/blob/master/images/role_select.png)
-
-- 先ほど開いていたAmplifyコンソールに戻ってください。
-- `Select an existing service role or create a new one so Amplify Console may access your resources.`の項目のプルダウンの横の🔄マークをクリックして下さい。
-- 先ほど作成した`amplifyconsole-backend-role`を選択してください。  
-- その後、`次へ`をクリックしてください。  
-
-***
-
 ![deploy_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/deploy_confirm.png)
 
 - `確認`画面が表示されますが、`保存してデプロイ`をクリックしてください。  
