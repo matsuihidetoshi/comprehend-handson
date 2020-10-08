@@ -147,12 +147,12 @@ export default {
           v => !!v || '必ず入力してください',
           v => /.+@.+/.test(v) || 'メールアドレスの形式が正しくありません'
         ],
-        label: '件名'
+        label: 'メールアドレス'
       },
       content: {
         value: null,
         rules: [v => !!v || '必ず入力してください'],
-        label: '件名'
+        label: '内容'
       },
       valid: false,
       dialog: false,
