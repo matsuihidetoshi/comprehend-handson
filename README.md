@@ -519,7 +519,7 @@ npm i axios
 
 となる様にコピーします
 
-また、169行目に先ほど**3.API Gatewayの設定**の項目の最後に生成された**API Gatewayのエンドポイント**を設定されます。
+また、169行目に先ほど**3.API Gatewayの設定**の項目の最後に生成された**API Gatewayのエンドポイント**を設定します。
 
 - contact/src/views/Contact.vue#169
 
