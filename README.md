@@ -88,9 +88,9 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![lambda_role](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_role.png)
+![lambda_role](https://user-images.githubusercontent.com/13535662/115181448-f1043480-a112-11eb-97b0-2378058028c0.png)
 
-- 関数が正常に作成できたら、「アクセス権限」タブをクリックして、「ロール名」に表示されるロールをクリックします。
+- 関数が正常に作成できたら、「設定」タブの「アクセス権限」をクリックして、「ロール名」に表示されるロールをクリックします。
 
 ***
 
