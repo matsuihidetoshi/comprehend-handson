@@ -1,9 +1,9 @@
-# Amplify + Vue.js + Lambda + Comprehend で問合せした人の感情を判定するフォームを作る
+# Lambda + Comprehend で問合せした人の感情を判定するAPIを作る
 
-こんにちは、JAWS-UG 浜松支部の松井です。  
-近年、機械学習、AIに対する注目が集まっています。しかし、何らかの機械学習を活用した仕組みを1人で0から作るのはなかなかハードルが高く、機械学習で重要になってくるビッグデータの収集も大きな問題になってきます。  
+こんにちは、スタテク開発部の松井です。  
+近年、機械学習やAIに対する注目が集まっています。しかし、何らかの機械学習を活用した仕組みを1人で0から作るのはなかなかハードルが高く、機械学習で重要になってくるビッグデータの収集も大きな問題になってきます。  
 AWSでは、こうした問題を解決してくれる、機械学習を誰でも簡単に活用できるサービスが多数提供されています。  
-今回はその中でも、機械学習を使用してテキスト内でインサイトや関係性を検出する自然言語処理 (NLP) サービス[Amazon Comprehend](https://aws.amazon.com/jp/comprehend/)を活用して、 **問合せした人の感情を判定してくれるフォーム** を作ってみようと思います。
+今回はその中でも、機械学習を使用してテキスト内でインサイトや関係性を検出する自然言語処理 (NLP) サービス[Amazon Comprehend](https://aws.amazon.com/jp/comprehend/)を活用して、 **問合せした人の感情を判定してくれるAPI** を作ってみようと思います。
 
 - 機械学習、AI活用といっても、どこから手をつけたらいいか分からない
 - 日常の生活や業務でどの様に役に立てれば良いか分からない
@@ -12,15 +12,9 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ## 前提環境
 
-今回のハンズオンは下記の環境&ツールにて検証しています。 ※必要なツールが揃っていればPCやOSは問いません
+今回のハンズオンは下記の環境にて検証しています。 ※AWSマネジメントコンソールにアクセスして操作できればPCやOSは問いません
 
-- OS: Mac OS X
-- node: v14.6.0
-- npm: 6.14.7
-- vue: @vue/cli 4.4.6
-- amplify: 4.27.3
-
-また、[こちら](https://aws.amazon.com/jp/builders-flash/202008/amplify-crud-app/)をご参考に、上記の必要なツールを揃えた環境を[AWS Cloud9](https://aws.amazon.com/jp/cloud9/)上に構築していただくこともできます。
+- macOS Big Sur version 11.2.1
 
 ## 今回のアーキテクチャ
 
@@ -28,9 +22,9 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ![architecture](https://github.com/matsuihidetoshi/comprehend-handson/blob/main/images/architecture.png)
 
-- 動作の起点となるお問い合わせフォームは **Vue.js** を使って作成し、[AWS Amplify](https://aws.amazon.com/jp/amplify/)を使って[Amazon S3](https://aws.amazon.com/jp/s3/)バケット上にデプロイします。煩雑な環境構築のステップを省略し、証明書付きのURLを自動生成してくれるのでとても便利です。
-- お問い合わせフォームの入力内容はAjaxを使ってPOSTリクエストを送信し、[Amazon API Gateway](https://aws.amazon.com/jp/api-gateway/)が受け取り、[AWS Lambda](https://aws.amazon.com/jp/lambda/)へプロキシします。
-- [AWS Lambda](https://aws.amazon.com/jp/lambda/)では[Amazon Comprehend](https://aws.amazon.com/jp/comprehend/)を使って問合せ内容を解析し、文章から感情を判定します。その判定内容を添えて、[Amazon SES](https://aws.amazon.com/jp/ses/)へ管理者へのメール送信をリクエストします。
+- [Amazon API Gateway](https://aws.amazon.com/jp/api-gateway/)がリクエストを受け取り、[AWS Lambda](https://aws.amazon.com/jp/lambda/)へプロキシします。
+- [AWS Lambda](https://aws.amazon.com/jp/lambda/)では[Amazon Comprehend](https://aws.amazon.com/jp/comprehend/)を使って送信内容を解析し、文章から感情を判定します。
+- 上記の判定内容をメールのテキストに追記して、[Amazon SES](https://aws.amazon.com/jp/ses/)へ管理者へのメール送信をリクエストします。
 
 
 ## 1.SESの設定
