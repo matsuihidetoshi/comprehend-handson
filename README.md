@@ -112,7 +112,7 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ![function_code](https://github.com/matsuihidetoshi/comprehend-handson/blob/main/images/function_code.png)
 
-- 作成したLambda関数「contactFunction」に戻り、「コード」タブの「ソースコード」のエディタでコードを記述していきます。
+- 作成したLambda関数「contactFunction」に戻り、「コード」タブの「コードソース」のエディタでコードを記述していきます。
 
 lambda_function.py
 
