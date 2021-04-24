@@ -26,7 +26,7 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 今回のハンズオンで作成するシステムの構成図です。
 
-![aws_top](https://github.com/matsuihidetoshi/contact/blob/master/images/architecture.png)
+![aws_top](https://github.com/matsuihidetoshi/contact/blob/main/images/architecture.png)
 
 - 動作の起点となるお問い合わせフォームは **Vue.js** を使って作成し、[AWS Amplify](https://aws.amazon.com/jp/amplify/)を使って[Amazon S3](https://aws.amazon.com/jp/s3/)バケット上にデプロイします。煩雑な環境構築のステップを省略し、証明書付きのURLを自動生成してくれるのでとても便利です。
 - お問い合わせフォームの入力内容はAjaxを使ってPOSTリクエストを送信し、[Amazon API Gateway](https://aws.amazon.com/jp/api-gateway/)が受け取り、[AWS Lambda](https://aws.amazon.com/jp/lambda/)へプロキシします。
@@ -39,25 +39,25 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![ses_select](https://github.com/matsuihidetoshi/contact/blob/master/images/ses_select.png)
+![ses_select](https://github.com/matsuihidetoshi/contact/blob/main/images/ses_select.png)
 
 - [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「ses」と入力し、検索結果（プルダウン）の「Simple Email Service」をクリックします。
 
 ***
 
-![verify_email](https://github.com/matsuihidetoshi/contact/blob/master/images/verify_email.png)
+![verify_email](https://github.com/matsuihidetoshi/contact/blob/main/images/verify_email.png)
 
 - 左ペインの「Email Address」をクリックし、「Verify a New Mail Address」ボタンをクリックします。
 
 ***
 
-![input_email](https://github.com/matsuihidetoshi/contact/blob/master/images/input_email.png)
+![input_email](https://github.com/matsuihidetoshi/contact/blob/main/images/input_email.png)
 
 - フォームにメールアドレスを入力し、「Verify This Email Address」ボタンをクリックします。※こちらの見本アドレスはテスト用です。ご自身の実在するメールアドレスを使用してください。
 
 ***
 
-![click_link](https://github.com/matsuihidetoshi/contact/blob/master/images/click_link.png)
+![click_link](https://github.com/matsuihidetoshi/contact/blob/main/images/click_link.png)
 
 - 入力したメールアドレス宛に上記のようなメールが届くので、リンクをクリックしてメールアドレスの検証を完了させます。
 
@@ -67,19 +67,19 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![lambda_select](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_select.png)
+![lambda_select](https://github.com/matsuihidetoshi/contact/blob/main/images/lambda_select.png)
 
 - [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「lambda」と入力し、検索結果（プルダウン）の「Lambda」をクリックします。
 
 ***
 
-![lambda_create](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_create.png)
+![lambda_create](https://github.com/matsuihidetoshi/contact/blob/main/images/lambda_create.png)
 
 - 「関数の作成」をクリックします。
 
 ***
 
-![lambda_config](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_config.png)
+![lambda_config](https://github.com/matsuihidetoshi/contact/blob/main/images/lambda_config.png)
 
 - 「関数名」に「contactFunction」と入力します（命名は何でも構いません）。
 - 「ランタイム」に、今回は「Python 3.7」を選択します。
@@ -94,13 +94,13 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![policy_attach](https://github.com/matsuihidetoshi/contact/blob/master/images/policy_attach.png)
+![policy_attach](https://github.com/matsuihidetoshi/contact/blob/main/images/policy_attach.png)
 
 - 「ポリシーをアタッチします」ボタンをクリックします。
 
 ***
 
-![comprehend_policy](https://github.com/matsuihidetoshi/contact/blob/master/images/comprehend_policy.png)
+![comprehend_policy](https://github.com/matsuihidetoshi/contact/blob/main/images/comprehend_policy.png)
 
 - 検索フォームに「comprehend」と入力します。
 - 「ComprehendFullAccess」にチェックを入れます。
@@ -108,7 +108,7 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![ses_policy](https://github.com/matsuihidetoshi/contact/blob/master/images/ses_policy.png)
+![ses_policy](https://github.com/matsuihidetoshi/contact/blob/main/images/ses_policy.png)
 
 - 同じ要領で再度「ポリシーをアタッチします」ボタンを押してから、検索フォームに「ses」と入力します。
 - 「AmazonSESFullAccess」にチェックを入れます。
@@ -116,7 +116,7 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ***
 
-![function_code](https://github.com/matsuihidetoshi/contact/blob/master/images/function_code.png)
+![function_code](https://github.com/matsuihidetoshi/contact/blob/main/images/function_code.png)
 
 - 作成したLambda関数「contactFunction」に戻り、「設定」タブの「関数コード」のエディタでコードを記述していきます。
 
@@ -184,26 +184,26 @@ def lambda_handler(event, context):
 
 ***
 
-![create_test](https://github.com/matsuihidetoshi/contact/blob/master/images/create_test.png)
+![create_test](https://github.com/matsuihidetoshi/contact/blob/main/images/create_test.png)
 
 - 関数のテストイベントを作成して、動作確認します。
 - 上記の「テスト」ボタンをクリックします。
 
 ***
 
-![configure_test](https://github.com/matsuihidetoshi/contact/blob/master/images/configure_test.png)
+![configure_test](https://github.com/matsuihidetoshi/contact/blob/main/images/configure_test.png)
 
 - 上記の通り、「イベント名」（任意ですのでなんでも構いません）とテスト用のパラメータを記述して、「作成」ボタンをクリックします。
 
 ***
 
-![create_test](https://github.com/matsuihidetoshi/contact/blob/master/images/create_test.png)
+![create_test](https://github.com/matsuihidetoshi/contact/blob/main/images/create_test.png)
 
 - もう一度「テスト」ボタンをクリックすると、テストが実行されます。
 
 ***
 
-![mail_result](https://github.com/matsuihidetoshi/contact/blob/master/images/mail_result.png)
+![mail_result](https://github.com/matsuihidetoshi/contact/blob/main/images/mail_result.png)
 
 - 登録したアドレスに、上記の通りのメールが送られていれば成功です。
 - 「感情」という項目に、感情の判定結果が表示されているかと思います。
@@ -214,70 +214,70 @@ def lambda_handler(event, context):
 
 ***
 
-![add_trigger](https://github.com/matsuihidetoshi/contact/blob/master/images/add_trigger.png)
+![add_trigger](https://github.com/matsuihidetoshi/contact/blob/main/images/add_trigger.png)
 
 - 引き続き作成したLambda関数「contactFunction」の画面で、「＋トリガーを追加」ボタンをクリックします。
 
 ***
 
-![configure_trigger](https://github.com/matsuihidetoshi/contact/blob/master/images/configure_trigger.png)
+![configure_trigger](https://github.com/matsuihidetoshi/contact/blob/main/images/configure_trigger.png)
 
 - 選択肢はそれぞれ「API Gateway」「Create an API」「REST API」「オープン」を選択し、「追加」ボタンをクリックします。
 
 ***
 
-![select_trigger](https://github.com/matsuihidetoshi/contact/blob/master/images/select_trigger.png)
+![select_trigger](https://github.com/matsuihidetoshi/contact/blob/main/images/select_trigger.png)
 
 - Lambda関数の画面に戻るので、「contactFunction-API」をクリックします。
 
 ***
 
-![create_method](https://github.com/matsuihidetoshi/contact/blob/master/images/create_method.png)
+![create_method](https://github.com/matsuihidetoshi/contact/blob/main/images/create_method.png)
 
 - 「アクション」をクリックし、プルダウンメニューから「メソッドの作成」をクリックします。
 
 ***
 
-![select_post](https://github.com/matsuihidetoshi/contact/blob/master/images/select_post.png)
+![select_post](https://github.com/matsuihidetoshi/contact/blob/main/images/select_post.png)
 
-![method_check](https://github.com/matsuihidetoshi/contact/blob/master/images/method_check.png)
+![method_check](https://github.com/matsuihidetoshi/contact/blob/main/images/method_check.png)
 
 - 表示されるプルダウンメニューの「POST」をクリックして、右側のチェックマークをクリックします。
 
 ***
 
-![method_setup](https://github.com/matsuihidetoshi/contact/blob/master/images/method_setup.png)
+![method_setup](https://github.com/matsuihidetoshi/contact/blob/main/images/method_setup.png)
 
 - その後表示されるメソッドのセットアップ画面で、Lambda関数の項目で「contactFunction(作成したLambda関数名)」を入力（入力中に候補が表示されるので、クリックでOKです）します。
 - 「保存」ボタンをクリックします。
 
 ***
 
-![method_setup_ok](https://github.com/matsuihidetoshi/contact/blob/master/images/method_setup_ok.png)
+![method_setup_ok](https://github.com/matsuihidetoshi/contact/blob/main/images/method_setup_ok.png)
 
 - 「OK」ボタンをクリックします。
 
 ***
 
-![integrated_request](https://github.com/matsuihidetoshi/contact/blob/master/images/integrated_request.png)
+![integrated_request](https://github.com/matsuihidetoshi/contact/blob/main/images/integrated_request.png)
 
 - 続いて、「統合リクエスト」をクリックします。
 
 ***
 
-![add_mapping_template](https://github.com/matsuihidetoshi/contact/blob/master/images/add_mapping_template.png)
+![add_mapping_template](https://github.com/matsuihidetoshi/contact/blob/main/images/add_mapping_template.png)
 
 - 「マッピングテンプレート」をクリックし、「テンプレートが定義されていない場合 (推奨) 」を選択し、「マッピングテンプレートの追加」をクリックします。
 
 ***
 
-![open_mapping_template](https://github.com/matsuihidetoshi/contact/blob/master/images/open_mapping_template.png)
+![open_mapping_template](https://github.com/matsuihidetoshi/contact/blob/main/images/open_mapping_template.png)
 
 - 「application/json」と入力し、チェックマークをクリックします。
 
 ***
 
-![enter_mapping_template](https://github.com/matsuihidetoshi/contact/blob/master/images/enter_mapping_template.png)
+![enter_mapping_template](https://github.com/matsuihidetoshi/contact/blob/main/images/enter_mapping_template.png)
 
 - 下にスクロールして、マッピングテンプレートの入力フィールドをクリックします。
 
@@ -293,37 +293,37 @@ def lambda_handler(event, context):
 
 ***
 
-![select_cors](https://github.com/matsuihidetoshi/contact/blob/master/images/select_cors.png)
+![select_cors](https://github.com/matsuihidetoshi/contact/blob/main/images/select_cors.png)
 
 - 「アクション」から「CORS の有効化」をクリックします。
 
 ***
 
-![activate_cors](https://github.com/matsuihidetoshi/contact/blob/master/images/activate_cors.png)
+![activate_cors](https://github.com/matsuihidetoshi/contact/blob/main/images/activate_cors.png)
 
 - 「CORS を有効にして既存の CORS ヘッダーを置換」ボタンをクリックします。
 
 ***
 
-![confirm_cors](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_cors.png)
+![confirm_cors](https://github.com/matsuihidetoshi/contact/blob/main/images/confirm_cors.png)
 
 - 「はい、既存の値を置き換えます」ボタンをクリックします。
 
 ***
 
-![select_api_deploy](https://github.com/matsuihidetoshi/contact/blob/master/images/select_api_deploy.png)
+![select_api_deploy](https://github.com/matsuihidetoshi/contact/blob/main/images/select_api_deploy.png)
 
 - 「アクション」から「API のデプロイ」をクリックします。
 
 ***
 
-![confirm_api_deploy](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_api_deploy.png)
+![confirm_api_deploy](https://github.com/matsuihidetoshi/contact/blob/main/images/confirm_api_deploy.png)
 
 - 「デプロイされるステージ」に「default」を選択し、「デプロイ」をクリックします。
 
 ***
 
-![test_post](https://github.com/matsuihidetoshi/contact/blob/master/images/test_post.png)
+![test_post](https://github.com/matsuihidetoshi/contact/blob/main/images/test_post.png)
 
 - 次のページの上記に表示されるURLの末尾に「/contactFunction」を追加したURLに対して、**curl**でPOSTメソッドのリクエストを送信して、動作確認しましょう。
 
@@ -339,359 +339,10 @@ curl -X POST -H "Content-Type: application/json" -d '{"title":"curl", "contact":
 
 ***
 
-## 3.Vue.jsプロジェクトを作成
+## APIの削除
 
-Vue CLIを使って、必要な設定を行いながらVue.jsプロジェクトを作成していきます。
-
-#### vue create
-
-contactという名前でプロジェクトを作成
-
-```
-vue create contact
-```
-
-#### npmリポジトリの設定(y or nを入力しEnter)
-
-nを入力しEnter
-
-```
-?  Your connection to the default npm registry seems to be slow.
-   Use https://registry.npm.taobao.org for faster installation? (Y/n) n
-```
-
-#### 設定方法の選択(↑↓でカーソル移動、Enterで決定)
-
-Manually select featuresを選択しEnter
-
-```
-Vue CLI v4.1.2
-? Please pick a preset: 
-  default (babel, eslint) 
-❯ Manually select features 
-```
-
-#### 追加パッケージを選択(↑↓でカーソル移動、Spaceで選択、Enterで決定)
-
-下記の通り、Babel, Progressive Web App (PWA) Support, Router, Linter / Formatterを選択
-
-```
-? Check the features needed for your project: 
- ◉ Babel
- ◯ TypeScript
- ◉ Progressive Web App (PWA) Support
-❯◉ Router
- ◯ Vuex
- ◯ CSS Pre-processors
- ◉ Linter / Formatter
- ◯ Unit Testing
- ◯ E2E Testing
- ```
- 
- #### Historyモードを選択(y or nを入力しEnter)
- 
- yを入力しEnter
- 
- ```
- ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) y
- ```
- 
- #### ESLintの設定を選択(↑↓でカーソル移動、Enterで決定)
- 
- デフォルトのESLint with error prevention onlyを選択しEnter
- 
- ```
- ? Pick a linter / formatter config: (Use arrow keys)
-❯ ESLint with error prevention only 
-  ESLint + Airbnb config 
-  ESLint + Standard config 
-  ESLint + Prettier 
-```
-
-#### Lintのタイミングの設定(↑↓でカーソル移動、Enterで決定)
-
-デフォルトのLint on saveを選択しEnter
-
-```
-? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection)
-❯◉ Lint on save
- ◯ Lint and fix on commit
- ```
- 
-#### Configファイルの設定(↑↓でカーソル移動、Enterで決定)
-
-デフォルトのIn dedicated config filesを選択しEnter
-
-```
-? Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys)
-❯ In dedicated config files 
-  In package.json
-```
-
-#### 今回の設定を保存指定次回以降に転用するかの選択(y or nを入力しEnter)
-
-任意だが、今回はnを入力しEnter
-
-```
-? Save this as a preset for future projects? (y/N) n
-```
-
-#### Vue.jsプロジェクトにCloud9向けの設定を追加 ※Cloud9の場合
-
-Cloud9環境をお使いの方は、Cloud9の仕組み上起動した開発環境のサーバーをうまくプレビューできないため  
-設定を追加します。
-
-- [参考リポジトリのcontact/vue.config.js](https://github.com/matsuihidetoshi/contact/blob/master/vue.config.js)
-
-を、作成しているプロジェクトで同じ階層になる様に
-
-- contact/vue.config.js
-
-の様にコピーします
-#### テスト起動
-
-開発環境のローカルサーバーを起動してプレビューし、問題なくVue.jsプロジェクトが  
-立ち上がることを確認します。
-
-#### Vue.jsプロジェクトフォルダ(contact)に移動
-
-```
-cd contact
-```
-
-#### サーバー起動
-
-```
-npm run serve
-```
-
-ローカルのPCの場合はブラウザにてlocalhost:8080にアクセス
-Cloud9の場合、画面の上部のPreview→Preview Running Applicationをクリックし、  
-Vue.jsのデフォルト画面が表示されればOK
-
-## 4.フロントエンド側のコードを作成
-
-ここまでで、APIの作成とVue.jsのプロジェクトの作成ができました。  
-続いて、ユーザーが実際に問合せできる様にフォームを作成していきます。
-
-#### Vuetifyのインストール
-
-今回は簡単な問合せフォームを作成するだけですが、手軽にマテリアルデザインを導入できるデザインフレームワークの**Vuetify**を導入します。  
-これにより、優れたUIのフォームを簡単に作成することができます。
-
-```
-vue add vuetify
-```
-
-- 以上を実行
-
-```
-? Choose a preset: (Use arrow keys)
-❯ Default (recommended) 
-  Prototype (rapid development) 
-  Configure (advanced)
-```
-
-- Default (recommended)のまま、Enter
-
-#### axiosのインストール
-
-作成したAPIへリクエストを送信するためにライブラリ**axios**をインストールします。
-
-```
-npm i axios
-```
-
-- 以上を実行
-
-
-
-#### Contact.vue
-
-続いて、必要なコードを[参考リポジトリ](https://github.com/matsuihidetoshi/contact)からコピーしていきます。  
-まずはお問い合わせフォームページのビューをコピーします。
-
-- https://github.com/matsuihidetoshi/contact/blob/master/src/views/Contact.vue
-
-を
-
-- contact/src/views/Contact.vue
-
-となる様にコピーします
-
-また、169行目に先ほど**3.API Gatewayの設定**の項目の最後に生成された**API Gatewayのエンドポイント**を設定します。
-
-- contact/src/views/Contact.vue#169
-
-```
-- baseURL: 'https://example_url.execute-api.ap-northeast-1.amazonaws.com'
-+ baseURL: 'https://xxxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com' //3.API Gatewayの設定で生成されたエンドポイント
-```
-
-#### router/index.js
-
-ルーティングの設定を記述するファイルです。  
-ログイン状態を管理してページのアクセス制御をします。
-
-- https://github.com/matsuihidetoshi/contact/blob/master/src/router/index.js
-
-の内容を
-
-- contact/src/router/index.js
-
-に上書き
-
-#### App.vue
-
-アプリケーションの共通レイアウトのコンポーネントです。  
-各ページへのナビゲーションを追加します。
-
-- https://github.com/matsuihidetoshi/contact/blob/master/src/App.vue
-
-の内容を
-
-- contact/src/App.vue
-
-に上書き
-
-#### 動作確認
-
-すでにアプリケーションがローカルで起動している状態でしたら、一旦**ctrl + c**でサーバーを停止してから、
-
-```
-npm run serve
-```
-
-を実行してアプリケーションを起動し、プレビューしてみてください。  
-**Contact**ページからお問い合わせを送信し、設定したメールアドレスに感情解析の結果とともにお問い合わせ内容が届けばOKです。
-
-## フロントエンドのデプロイ
-
-ここまでで、
-
-- バックエンドの本番環境
-
-- フロントエンドのコード
-
-が完成しました。あとは、フロントエンドの本番環境のホスティングができれば完成です。
-
-#### GitHubにコードをプッシュ
-
-まず、今までの変更をGitでコミットしていきます。
-
-```
-git add .
-git commit -m 'built application'
-```
-
-その後、GitHubにサインインしてください。
-
-***
-
-![github_signin](https://github.com/matsuihidetoshi/contact/blob/master/images/github_signin.png)
-
-- ユーザー名またはメールアドレスとパスワードを入力し、「Sign in」をクリックします。
-
-***
-
-![new_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/new_repository.png)
-
-- 上部ナビゲーションバー右上の`+`をクリックし、`New repository`をクリックしてください。
-
-***
-
-![create_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/create_repository.png)
-
-- `Repository name`に、`contact`と入力し、それ以外はデフォルトのまま`Create repository`をクリックしてください。
-
-***
-
-![copy_push_command](https://github.com/matsuihidetoshi/contact/blob/master/images/copy_push_command.png)
-
-- `…or push an existing repository from the command line`という項目をコピーし、ターミナルでプロジェクトフォルダにて実行してください。
-
-***
-
-```
-git remote add origin https://github.com/ユーザー名/contact.git
-git push -u origin master
-```
-
-下記のようにユーザー名、パスワードを求められるので、GitHubの`ユーザー名` `パスワード`を入力してください。
-
-```
-Username for 'https://github.com/matsuihidetoshi/contact.git':ユーザー名
-Password for 'https://matsuihidetoshi@github.com/matsuihidetoshi/contact.git':パスワード
-```
-
-これで、GitHubにコードがプッシュされ、デプロイの準備ができました。
-
-#### Amplifyコンソールからデプロイ
-
-通常、Webページをホスティングするには、サーバー構築・ネットワーク設定・ミドルウェアのインストール及び設定等が必要ですが、  
-Amplifyコンソールを使用するとWebインターフェースから少ないステップで簡単にデプロイできます。
-
-#### Amplifyコンソールを開く
-
-![choose_amplify](https://github.com/matsuihidetoshi/contact/blob/master/images/choose_amplify.png)
-
-- AWSマネジメントコンソールから、`Amplify`を検索し、選択します。  
-
-***
-
-![select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/amplify_get_started.png)
-
-- `GET STARTED`をクリックします。  
-
-***
-
-#### デプロイ - Githubの連携
-
-![select_github](https://github.com/matsuihidetoshi/contact/blob/master/images/select_github.png)
-
-- `GitHub`を選択し、`Connect branch`をクリックしてください。  
-
-***
-
-![oauth](https://github.com/matsuihidetoshi/contact/blob/master/images/oauth.png)
-
-- GitHubの認証ページが開く場合は、`ユーザー名またはメールアドレス` と `パスワード`を入力してログインしてください。  
-- OAuthによるアクセス許可の画面が表示されますので、`Authorize aws-amplify-console`をクリックしてください。
-
-***
-
-![select_repository](https://github.com/matsuihidetoshi/contact/blob/master/images/select_repository.png)
-
-- `リポジトリ`は`GitHubユーザー名/contact`を選択し、ブランチは`master`を選択し、`次へ`をクリックしてください。  
-
-***
-
-#### デプロイ - ビルド設定
-
-![build_config](https://github.com/matsuihidetoshi/contact/blob/master/images/build_config.png)
-
-- `次へ`をクリックします。
-
-***
-
-![deploy_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/deploy_confirm.png)
-
-- `確認`画面が表示されますが、`保存してデプロイ`をクリックしてください。  
-
-***
-
-![deploy_progress](https://github.com/matsuihidetoshi/contact/blob/master/images/deploy_progress.png)
-  
-- ここから少し時間がかかりますが（10分ほど）、デプロイのフローが終わるまでお待ちください。
-- デプロイが完了してからURLのリンクをクリックすると、アプリケーションが開きます。 
-- 動作確認し、問題なければ完成です。おめでとうございます！
-
-***
-
-## アプリケーションの削除
-
-デプロイしたアプリケーションは、そのままにしておくとオンデマンドで費用が発生します。  
-料金をゼロにするためには、以下のようにアプリケーションリソース全体の削除を行います。
+デプロイしたAPIは、そのままにしておくとオンデマンドで費用が発生します。  
+料金をゼロにするためには、以下の手順にて関連ソースの削除を行います。
 
 #### API Gatewayの削除
 
@@ -699,19 +350,19 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-![select_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/select_api_gateway.png)
+![select_api_gateway](https://github.com/matsuihidetoshi/contact/blob/main/images/select_api_gateway.png)
 
 - [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「api」と入力し、検索結果（プルダウン）の「API Gateway」をクリックします。
 
 ***
 
-![delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_api_gateway.png)
+![delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/main/images/delete_api_gateway.png)
 
 - **contactFunction-API**のラジオボタンをクリックして、**Actions**のプルダンメニューの**Delete**をクリックします。
 
 ***
 
-![confirm_delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_delete_api_gateway.png)
+![confirm_delete_api_gateway](https://github.com/matsuihidetoshi/contact/blob/main/images/confirm_delete_api_gateway.png)
 
 - **削除**をクリックすれば、API Gatewayの削除完了です。
 
@@ -723,51 +374,23 @@ Amplifyコンソールを使用するとWebインターフェースから少な�
 
 ***
 
-![lambda_select](https://github.com/matsuihidetoshi/contact/blob/master/images/lambda_select.png)
+![lambda_select](https://github.com/matsuihidetoshi/contact/blob/main/images/lambda_select.png)
 
 - [AWSマネジメントコンソール](https://console.aws.amazon.com/)にアクセスし、「lambda」と入力し、検索結果（プルダウン）の「Lambda」をクリックします。
 
 ***
 
-![delete_lambda](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_lambda.png)
+![delete_lambda](https://github.com/matsuihidetoshi/contact/blob/main/images/delete_lambda.png)
 
 - **contactFunction**のラジオボタンをクリックして、**アクション**のプルダンメニューの**削除**をクリックします。
 
 ***
 
-![confirm_delete_lambda](https://github.com/matsuihidetoshi/contact/blob/master/images/confirm_delete_lambda.png)
+![confirm_delete_lambda](https://github.com/matsuihidetoshi/contact/blob/main/images/confirm_delete_lambda.png)
 
 - **削除**をクリックすれば、Lambda関数の削除完了です。
 
 ***
 
-
-#### Amplifyコンソールから削除
-
-S3にデプロイされたアプリケーションのフロントエンドも削除する必要があります。
-
-***
-
-![delete_select_contact](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_select_contact.png)
-
-- **Amplifyコンソール**を開き、**全てのアプリ**→**contact**を選択してください。  
-
-***
-
-![delete](https://github.com/matsuihidetoshi/contact/blob/master/images/delete.png)
-
-- 画面右上の**アクション**から、**アプリの削除**を選択してください。  
-
-***
-
-![delete_confirm](https://github.com/matsuihidetoshi/contact/blob/master/images/delete_confirm.png)
-
-- 確認用ダイアログが表示されるので、フォームに**delete**を入力し、**Delete**を押下してください。
-
-***
-
-これで、今回のハンズオンで作成したアプリケーションの全てのリソースが削除されます。  
-今回のハンズオンのためにCloud9環境を作成され、またそのCloud9環境をこれ以降使用しない場合は、EC2インスタンスタイプに応じた料金が発生しますので、そちらも別途削除しておいてください。
-
-  
+これで、今回のハンズオンで作成したAPIの全てのリソースが削除されます。    
 以上で終了です。お疲れ様でした！
