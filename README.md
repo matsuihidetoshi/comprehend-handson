@@ -112,7 +112,7 @@ AWSでは、こうした問題を解決してくれる、機械学習を誰で�
 
 ![function_code](https://github.com/matsuihidetoshi/comprehend-handson/blob/main/images/function_code.png)
 
-- 作成したLambda関数「contactFunction」に戻り、「設定」タブの「関数コード」のエディタでコードを記述していきます。
+- 作成したLambda関数「contactFunction」に戻り、「コード」タブの「コードソース」のエディタでコードを記述していきます。
 
 lambda_function.py
 
@@ -191,9 +191,9 @@ def lambda_handler(event, context):
 
 ***
 
-![create_test](https://github.com/matsuihidetoshi/comprehend-handson/blob/main/images/create_test.png)
+![create_test](https://github.com/matsuihidetoshi/comprehend-handson/blob/main/images/deploy_function.png)
 
-- もう一度「テスト」ボタンをクリックすると、テストが実行されます。
+- 関数をデプロイし、もう一度「テスト」ボタンをクリックすると、テストが実行されます。
 
 ***
 
